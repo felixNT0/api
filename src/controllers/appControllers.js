@@ -120,7 +120,7 @@ const generateAgoraToken = asyncHandler(async (req, res) => {
     expirationTimeInSeconds
   );
 
-  return res.json({ token });
+  return res.json({ token, agoraAppId });
 });
 
 module.exports = {
