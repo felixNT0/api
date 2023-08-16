@@ -29,7 +29,7 @@ app.use(
 );
 
 // GET all meeting
-app.use("/.netlify/functions/api", router);
+app.use("/meeting", router);
 module.exports.handler = serverless(app);
 
 // const port = process.env.PORT || 5000;
