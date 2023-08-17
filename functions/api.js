@@ -11,22 +11,22 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(cors());
-const allowedOrigins = [
-  "https://fkt-calling-app.vercel.app",
-  "http://localhost:3000",
-];
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (allowedOrigins.includes(origin) || !origin) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-  })
-);
+app.use(cors());
+// const allowedOrigins = [
+//   "https://fkt-calling-app.vercel.app",
+//   "http://localhost:3000",
+// ];
+// app.use(
+//   cors({
+//     origin: (origin, callback) => {
+//       if (allowedOrigins.includes(origin) || !origin) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error("Not allowed by CORS"));
+//       }
+//     },
+//   })
+// );
 
 // GET all meeting
 app.use("/.netlify/functions/api", router);
