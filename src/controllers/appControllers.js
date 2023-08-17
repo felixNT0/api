@@ -2,6 +2,9 @@ const asyncHandler = require("express-async-handler");
 const admin = require("firebase-admin");
 const agora = require("agora-access-token");
 const moment = require("moment");
+const { config } = require("dotenv");
+
+config();
 
 const serviceAccount = require("../../firesbaseConfig.json");
 admin.initializeApp({
