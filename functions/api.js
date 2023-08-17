@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 // app.use(cors());
 const allowedOrigins = [
-  "https://fkt-calling-app.vercel.app/",
+  "https://fkt-calling-app.vercel.app",
   "http://localhost:3000",
 ];
 app.use(
